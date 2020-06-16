@@ -37,10 +37,10 @@
       <v-flex xs12 md12 class="justify-center layout">
         <p class="heading">intro</p>
       </v-flex>
-      <v-flex xs12 md5 class="justify-center layout align-center wrap" px-3>
-        An inspiring engineering student in a track of development, Leadership, communities.
-        I have {{new Date().getFullYear() - 2019}} experience in Web Development,Event Management.
-        Iam easily adaptable and apporachable person and serve as a team player.
+      <v-flex xs12 md5 style="text-align:justify" px-3>
+        An inspiring engineering student in a track of development, Leadership & communities.
+        I have {{new Date().getFullYear() - 2019}} year experience in Web Development & Event Management.
+        Iam easily adaptable and approachable person and serve as a team player.
         Developing a thing with the help of technology to help society in an optimised way.
         Leadership is said to be, we are, not I am.
       </v-flex>
@@ -61,8 +61,8 @@
             :href="icon.link"
             style="text-decoration:none;"
             target="_blank"
-            v-for="icon in icons"
-            :key="icon"
+            v-for="(icon,i) in icons"
+            :key="i"
           >
             <v-btn class="mx-4" :color="icon.color" icon>
               <v-icon size="24px">{{ icon.icon }}</v-icon>
@@ -73,7 +73,7 @@
         <v-card-text class="pt-0" style="color:#777777">
           <p style="font-weight:bold">My Bio</p>
           <div>
-            <p>P.Sethupathi</p>
+            <p>Mr P.Sethupathi</p>
             <p>14-07-2001</p>
             <p>S/o R.D.Palanisamy</p>
             <p>46, Ramapattinam,</p>

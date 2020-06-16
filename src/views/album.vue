@@ -46,7 +46,6 @@ export default {
       let url = "https://sethu1431.github.io/myresume-api/myresume.json";
       try {
         axios.get(url).then(e => {
-          console.table(e.data.album);
           e.data.album.forEach(e => {
             this.album.push(e);
           });

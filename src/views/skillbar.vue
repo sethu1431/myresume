@@ -15,7 +15,7 @@
               class="my-5"
               fontColor="#fff"
               skill="Html"
-              level="90"
+              :level="90"
             />
             <skill-bar
               barSize="15"
