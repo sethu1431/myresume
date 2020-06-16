@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app v-if="state">loading</v-app>
-    <v-app else>
+    <v-app v-if="!state">
       <v-app-bar app color="white" dark>
         <div class="d-flex">
           <div class="name">Sethupathi Palanisamy</div>

@@ -11,7 +11,7 @@
               <v-img :src="i.pathLong" contain class="img">
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0" align="center" justify="center">
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    <v-progress-circular indeterminate color="indigo accent-4"></v-progress-circular>
                   </v-row>
                 </template>
                 <v-expand-transition>
