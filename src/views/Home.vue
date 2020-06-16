@@ -14,7 +14,7 @@
           </div>
         </div>
         <a
-          href="https://www.linkedin.com/in/sethu-pathi-580560170/"
+          href="https://www.linkedin.com/in/sethu-pathi-580560170"
           target="_blank"
           style="text-decoration:none"
         >
@@ -37,12 +37,12 @@
       <v-flex xs12 md12 class="justify-center layout">
         <p class="heading">intro</p>
       </v-flex>
-      <v-flex xs12 md12 class="justify-center layout align-center wrap" px-3>
+      <v-flex xs12 md5 class="justify-center layout align-center wrap" px-3>
         An inspiring engineering student in a track of development, Leadership, communities.
-        <br />I have {{new Date().getFullYear() - 2019}} experience in Web Development,Event Management.
-        <br />Iam easily adaptable and apporachable person and serve as a team player.
-        <br />Developing a thing with the help of technology to help society in an optimised way.
-        <br />Leadership is said to be, we are, not I am.
+        I have {{new Date().getFullYear() - 2019}} experience in Web Development,Event Management.
+        Iam easily adaptable and apporachable person and serve as a team player.
+        Developing a thing with the help of technology to help society in an optimised way.
+        Leadership is said to be, we are, not I am.
       </v-flex>
       <v-flex xs12 md12 class="justify-center layout align-center" mt-1>
         <span style="font-weight:bold">வளர்க டெக்னாலஜி</span>
@@ -53,6 +53,7 @@
     <projects />
     <certification />
     <education />
+    <album />
     <v-footer dark padless class="mt-5">
       <v-card flat tile class="text-center" style="background-color:#F9F9FF;width:100%">
         <v-card-text>
@@ -99,8 +100,9 @@ import sethu from "@/assets/sethu.png";
 import skillView from "./skillbar";
 import education from "./education";
 import projects from "./projects";
-import communities from './communities'
-import certification from './certification'
+import communities from "./communities";
+import certification from "./certification";
+import album from "./album";
 export default {
   name: "Home",
   components: {
@@ -108,16 +110,17 @@ export default {
     education,
     projects,
     communities,
-    certification
+    certification,
+    album
   },
   data: () => ({
     sethu: sethu,
     icons: [
-      { icon: "mdi-facebook", color: "indigo", link: "dee" },
-      { icon: "mdi-twitter", color: "blue", link: "" },
-      { icon: "mdi-linkedin", color: "blue", link: "" },
-      { icon: "mdi-instagram", color: "red", link: "" },
-      { icon: "mdi-github", color: "black", link: "" }
+      { icon: "mdi-facebook", color: "indigo", link: "https://www.facebook.com/kongu.sethu.1471" },
+      { icon: "mdi-twitter", color: "blue", link: "https://twitter.com/sethu_kgm" },
+      { icon: "mdi-linkedin", color: "blue", link: "https://www.linkedin.com/in/sethu-pathi-580560170" },
+      { icon: "mdi-instagram", color: "red", link: "https://instagram.com/sethu.palanisamy?igshid=17u3uj9xf7qkj" },
+      { icon: "mdi-github", color: "black", link: "https://github.com/sethu1431" }
     ]
   })
 };
@@ -153,7 +156,7 @@ export default {
   font-weight: 600;
   letter-spacing: 1.2px;
 }
-.img{
-  border: 1px solid #DDDDDD;
+.img {
+  border: 1px solid #dddddd;
 }
 </style>

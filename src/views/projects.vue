@@ -29,7 +29,7 @@
       <v-flex xs12 md12 align-center justify-center layout column>
         <p class="sub-heading pt-3">For More Projects Visit my Github Repo</p>
         <a
-          href="https://www.linkedin.com/in/sethu-pathi-580560170/"
+          href="https://github.com/sethu1431"
           target="_blank"
           style="text-decoration:none"
         >

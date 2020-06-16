@@ -22,10 +22,12 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .name {
-  color: black;
-  font-family: "Lobster", cursive;
+  background: -webkit-linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Pacifico', cursive;
   font-size: 25px;
   letter-spacing: 0.2rem;
 }

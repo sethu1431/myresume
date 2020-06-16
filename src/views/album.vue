@@ -2,22 +2,29 @@
   <div>
     <v-layout align-center justify-center wrap mt-3 pt-3 style="background:white">
       <v-flex xs12 md12 class="justify-center layout">
-        <p class="heading">certifications</p>
+        <p class="heading">my album</p>
       </v-flex>
-      <v-flex xs12 md4 px-3>
-        <v-virtual-scroll :items="certification" :item-height="200" height="300">
-          <template v-slot="{ item }">
-            <v-list-item class="pa-5">
-              <v-img :src="item.image" aspect-ratio="2" class="ma-5">
+      <v-flex xs12 md8 px-3>
+        <v-layout align-center justify-center row wrap>
+          <v-flex v-for="(i,j) in album" :key="j" xs6 md4 pa-3>
+            <v-hover v-slot:default="{ hover }">
+              <v-img :src="i.image" contain aspect-ratio="2">
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0" align="center" justify="center">
                     <v-progress-circular indeterminate color="indigo accent-3"></v-progress-circular>
                   </v-row>
                 </template>
+                <v-expand-transition>
+                  <div
+                    v-if="hover"
+                    class="d-flex transition-fast-in-fast-out v-card--reveal indigo accent-4 white--text"
+                    style="height: 100%;"
+                  >{{ i.theme }}</div>
+                </v-expand-transition>
               </v-img>
-            </v-list-item>
-          </template>
-        </v-virtual-scroll>
+            </v-hover>
+          </v-flex>
+        </v-layout>
       </v-flex>
     </v-layout>
   </div>
@@ -28,7 +35,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      certification: []
+      album: []
     };
   },
   mounted() {
@@ -39,8 +46,9 @@ export default {
       let url = "https://sethu1431.github.io/myresume-api/myresume.json";
       try {
         axios.get(url).then(e => {
-          e.data.certification.forEach(e => {
-            this.certification.push(e);
+          console.table(e.data.album);
+          e.data.album.forEach(e => {
+            this.album.push(e);
           });
         });
       } catch (err) {
