@@ -5,10 +5,10 @@
         <p class="heading">certifications</p>
       </v-flex>
       <v-flex xs12 md4 px-3>
-        <v-virtual-scroll :items="certification" :item-height="200" height="300">
+        <v-virtual-scroll :items="certification" :item-height="300" height="250">
           <template v-slot="{ item }">
             <v-list-item class="pa-5">
-              <v-img :src="item.image" aspect-ratio="2" class="ma-5">
+              <v-img :src="item.image" aspect-ratio="1.5" :lazy-src="lazy" class="ma-5" contain>
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0" align="center" justify="center">
                     <v-progress-circular indeterminate color="indigo accent-3"></v-progress-circular>
@@ -25,10 +25,12 @@
 
 <script>
 import axios from "axios";
+import lazy from '../assets/blurd.jpg'
 export default {
   data() {
     return {
-      certification: []
+      certification: [],
+      lazy: lazy
     };
   },
   mounted() {

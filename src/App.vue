@@ -1,6 +1,14 @@
 <template>
-  <div>
-    <v-app v-if="state">loading</v-app>
+  <div class="disableselect">
+    <v-app v-if="state">
+      <v-layout align-center justify-center>
+        <v-flex xs12 md12>
+          <center>
+            <v-progress-circular indeterminate color="indigo accent-4"></v-progress-circular>
+          </center>
+        </v-flex>
+      </v-layout>
+    </v-app>
     <v-app v-if="!state">
       <v-app-bar app color="white" dark>
         <div class="d-flex">
@@ -70,5 +78,18 @@ export default {
 
   font-weight: 600;
   letter-spacing: 1.5px;
+}
+@media print {
+  .disableselect {
+    display: none;
+  }
+}
+.disableselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge*/
+  user-select: none; /* Non-prefixed version, currentl not supported by any browser */
 }
 </style>

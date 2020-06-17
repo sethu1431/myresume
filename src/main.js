@@ -3,7 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import vuetify from './plugins/vuetify';
-
+import imageViewer from 'image-viewer-vue'
+Vue.use(imageViewer)
 Vue.config.productionTip = false
 
 new Vue({

@@ -10,7 +10,7 @@
           </div>
           <div class="white--text py-2">
             <v-icon color="orange">person</v-icon>
-            <span class="pl-3">Sri Krishna College of technology</span>
+            <span class="pl-3">Sri Krishna College of Technology</span>
           </div>
         </div>
         <a

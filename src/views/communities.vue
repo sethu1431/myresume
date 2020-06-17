@@ -8,7 +8,7 @@
         <v-layout align-center justify-center row wrap>
           <v-flex v-for="(i,j) in images" :key="j" xs6 md4 pa-3>
             <v-hover v-slot:default="{ hover }">
-              <v-img :src="i.pathLong" contain class="img" aspect-ratio="3">
+              <v-img :src="i.pathLong" :lazy-src="lazy" contain class="img" aspect-ratio="3">
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0" align="center" justify="center">
                     <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
@@ -31,10 +31,12 @@
 </template>
 
 <script>
+import lazy from '../assets/blurd.jpg'
 export default {
   data() {
     return {
       images: [],
+      lazy: lazy,
       content: [
         "Core Team Member - 2019-20",
         "Campus Ninja - 2020",
